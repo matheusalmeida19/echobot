@@ -7,12 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:717619231725:android:09bef428426b00188405e4",
+        "mobilesdk_app_id": "1:717619231725:android:d6bdf43bee2829638405e4",
         "android_client_info": {
-          "package_name": "com.example.echobot_application"
+          "package_name": "com.echobot.sincronizacalendar"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "717619231725-353bp4skfr7sr6uoje39evqu46hepljl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBZgPA9V6CXNPPtPPXrQocXPcu9c4bJdPM"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717619231725-353bp4skfr7sr6uoje39evqu46hepljl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "717619231725-551md4i4d2qco38ahnrsibuo5fpq1iq3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.echobotApplication"
+              }
+            }
+          ]
         }
       }
     }

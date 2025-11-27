@@ -31,12 +31,13 @@ class Firestore_Datasource {
           .collection('notes')
           .doc(uuid)
           .set({
-            'id': uuid,
-            'subtitle': subtitle,
-            'isDon': false,
-            'time': '${data.hour}:${data.minute}',
-            'title': title,
-          });
+        'id': uuid,
+        'subtitle': subtitle,
+        'isDon': false,
+        'time': '${data.hour}:${data.minute}',
+        'title': title,
+        'image': image,
+      });
       return true;
     } catch (e) {
       print(e);
@@ -52,7 +53,7 @@ class Firestore_Datasource {
           data['id'],
           data['subtitle'],
           data['time'],
-          data['image'],
+          data['image'] as int? ?? 0,
           data['title'],
           data['isDon'],
         );
@@ -89,11 +90,11 @@ class Firestore_Datasource {
   }
 
   Future<bool> Update_Note(
-    String uuid,
-    int image,
-    String title,
-    String subtitle,
-  ) async {
+      String uuid,
+      int image,
+      String title,
+      String subtitle,
+      ) async {
     try {
       DateTime data = new DateTime.now();
       await _firestore
@@ -102,11 +103,11 @@ class Firestore_Datasource {
           .collection('notes')
           .doc(uuid)
           .update({
-            'time': '${data.hour}:${data.minute}',
-            'subtitle': subtitle,
-            'title': title,
-            'image': image,
-          });
+        'time': '${data.hour}:${data.minute}',
+        'subtitle': subtitle,
+        'title': title,
+        'image': image,
+      });
       return true;
     } catch (e) {
       print(e);
